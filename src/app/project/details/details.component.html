@@ -1,0 +1,23 @@
+<section class="details-section">
+    <h2>Detalles del Proyecto</h2>
+    <form>
+      <label for="projectName">Nombre del Proyecto</label>
+      <input
+        type="text"
+        id="projectName"
+        name="projectName"  
+        ngModel="project.name"
+      />
+  
+      <label for="description">Descripción</label>
+      <textarea
+        id="description"
+        rows="5"
+        name="description"  
+        ngModel="project.description"
+      ></textarea>
+  
+      <button type="button" class="btn-primary" (click)="saveDetails()">Guardar Cambios</button>
+    </form>
+  </section>
+  

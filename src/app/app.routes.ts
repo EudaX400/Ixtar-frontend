@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ProjectComponent } from './pages/project/project.component';
+import { FormsModule } from '@angular/forms';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -10,7 +11,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), FormsModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

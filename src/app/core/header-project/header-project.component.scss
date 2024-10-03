@@ -1,0 +1,23 @@
+header {
+  background-color: #894fe7;
+  color: white;
+  padding: 10px;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      display: flex;
+      gap: 15px;
+      button {
+        color: white;
+        text-decoration: none;
+        background-color: #894fe7;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

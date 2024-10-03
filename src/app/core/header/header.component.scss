@@ -1,17 +1,37 @@
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
+  background-color: #6200ff;
+  color: white;
+  padding: 10px;
+
+  nav {
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+    div{
+        button {
+
+            background-color: #3700b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+    }
+    
   }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-  
+}
