@@ -1,26 +1,12 @@
-<app-header-project (sectionChanged)="onSectionChange($event)" ></app-header-project> @if (selectedSection === 'ideas') {
+<app-header-project
+  (sectionChanged)="onSectionChange($event)"
+></app-header-project>
+@if (selectedSection === 'ideas') {
 
 <app-ideas></app-ideas>
 
 } @if (selectedSection === 'manage') {
 
-<section class="kanban-section">
-  <h2>Administrar Proyecto</h2>
-  <div class="kanban-container">
-    <div class="kanban-column">
-      <h3>Por Hacer</h3>
-      <div class="kanban-task">Tarea 1</div>
-    </div>
-    <div class="kanban-column">
-      <h3>En Proceso</h3>
+  <app-board></app-board>
 
-      <div class="kanban-task">Tarea 2</div>
-    </div>
-    <div class="kanban-column">
-      <h3>Finalizado</h3>
-
-      <div class="kanban-task">Tarea 3</div>
-    </div>
-  </div>
-</section>
 } @if (selectedSection === 'details') {<app-details></app-details>}
