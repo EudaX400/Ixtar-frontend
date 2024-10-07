@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   template: `
     <img
-    src="assets/icons/drag_indicator_rounded.svg"
+    src="/icons/drag_indicator_rounded.svg"
     alt="drag"
     role="button"
   />`

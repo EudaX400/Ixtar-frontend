@@ -1,6 +1,9 @@
-<button [disabled]="canUndo === false" (click)="undo()">
-    <img src="assets/icons/undo_rounded.svg" alt="Deshacer" />
+
+  <button [disabled]="canUndo === false" (click)="undo()">
+    <img src="/icons/undo_rounded.svg" alt="Deshacer" />
   </button>
+  <h2>Administrar proyecto</h2>
   <button [disabled]="canRedo === false" (click)="redo()">
-    <img src="assets/icons/redo_rounded.svg" alt="Repetir" />
+    <img src="/icons/redo_rounded.svg" alt="Repetir" />
   </button>
+

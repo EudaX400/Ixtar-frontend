@@ -1,13 +1,13 @@
 :host {
-    background-color: var(--kanban-task-bg-color);
+    background-color: rgb(135, 116, 241);
     color: var(--kanban-task-text-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: var(--base-separation);
+    padding: 2px;
     border-radius: 8px;
-    margin-bottom: var(--base-separation);
+    margin-bottom: 0.5rem;
   }
   
   .task__description {
@@ -20,7 +20,7 @@
     border: none;
     cursor: pointer;
     flex-shrink: 1;
-    margin-left: var(--half-separation);
+    margin-left: 1rem;
   
     img {
       position: relative;
