@@ -1,6 +1,4 @@
 :host {
-  --kanban-preview-bg-color: #3f1680;
-
   display: flex;
   flex-direction: column;
 }
@@ -15,7 +13,9 @@
 }
 
 .cdk-drag-preview {
-  background-color: var(--kanban-preview-bg-color);
+  background-color: rgba(92, 33, 231, 0.8)
+ 
+
 }
 
 .cdk-drag-placeholder {

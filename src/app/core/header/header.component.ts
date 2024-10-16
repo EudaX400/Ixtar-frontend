@@ -14,4 +14,8 @@ goToProject() {
   this.router.navigate(['/project']); 
 }
 
+goToHome() {
+  this.router.navigate(['/home']);
+}
+
 }

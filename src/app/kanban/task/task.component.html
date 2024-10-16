@@ -4,7 +4,7 @@
   role="textbox"
   (mousedown)="$event.stopPropagation()"
   (keydown.enter)="self.blur()"
-  (blur)="descriptionUpdated(self.innerText ?? '')"
+  (blur)="descriptionUpdated(self.innerText)"
   #self
 >
   {{ task.description }}
