@@ -11,4 +11,11 @@
       </button>
     </div>
   </nav>
+  <div class="headerMobile">
+    <img src="/icons/MenuMobileIcon.svg" alt="" (click)="toggleMenuMobile()" [style.display]="showMenuMobile ? 'none' : 'inline'"/>
+    @if (showMenuMobile) {
+      <app-header-mobile [showMenuMobile]="showMenuMobile" (toggleMenuMobile)="toggleMenuMobile()" ></app-header-mobile>
+    }
+  </div>
+
 </header>

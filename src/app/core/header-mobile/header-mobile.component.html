@@ -1,0 +1,43 @@
+@if (showMenuMobile) {
+<div class="header">
+  <div class="topSection">
+    <a href="/profile">
+      <img src="/user.png" alt="user Logo" />
+    </a>
+    <img src="/icons/CloseIcon.svg" alt="close" (click)="onCloseMenu()" />
+  </div>
+
+  <div class="logSection">
+    <a routerLink="/login">Log In</a>
+    <div class="divider"></div>
+    <a routerLink="/sign up">Sign Up</a>
+  </div>
+
+  <div class="index">
+    <div class="indexLinks">
+      <div class="functions" (click)="toggleOptions()">
+        <a [style.color]="showOptions ? '#6d1fff' : 'white'">Funciones</a>
+        @if (showOptions) {
+        <span>▲</span>
+        }@else{
+        <span>▼</span>
+        }
+      </div>
+
+      @if(showOptions){
+      <div class="options">
+        <a routerLink="/datils">Detalles</a>
+        <a routerLink="/ideas">Lluvia de ideas</a>
+        <a routerLink="/admin">Administrar</a>
+      </div>
+
+      }
+    </div>
+    <a (click)="goToProject()"> Nuevo Proyecto </a>
+    <a (click)="goToProject()"> Contacto </a>
+  </div>
+  <a class="logo" (click)="goToHome()">
+    <img src="/logo.png" alt="user logo" />
+  </a>
+</div>
+}

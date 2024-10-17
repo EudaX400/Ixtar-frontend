@@ -20,18 +20,30 @@ header {
         }
       }
     }
-    div{
-        button {
-
-            background-color: #3700b3;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-          }
-
+    div {
+      button {
+        background-color: #3700b3;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
     }
-    
+
+    @media (max-width: 460px) {
+      display: none;
+    }
+  }
+
+  .headerMobile {
+    display: none;
+
+
+
+    @media (max-width: 460px) {
+      display: flex;
+      justify-content: end;
+    }
   }
 }
