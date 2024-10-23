@@ -3,11 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ProjectComponent } from './pages/project/project.component';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from './auth/auth.guard';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'project', component: ProjectComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }, 
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent }
+  
 ];
 
 @NgModule({
