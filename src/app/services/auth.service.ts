@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://ixtar-backend.up.railway.app/';
+  private apiUrl = 'https://ixtar-backend.up.railway.app';
 
   constructor(private http: HttpClient) {}
 
