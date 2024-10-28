@@ -1,6 +1,15 @@
-<form (submit)="onSubmit()">
-    <input [(ngModel)]="credentials.username" placeholder="Username" required />
-    <input [(ngModel)]="credentials.password" type="password" placeholder="Password" required />
+<section>
+  <form (submit)="onSubmit()">
+    <label>Enter the email</label>
+    <input [(ngModel)]="credentials.email" name="email" placeholder="Email" required />
+    <label>Enter the password</label>
+    <input
+      [(ngModel)]="credentials.password"
+      name="password"
+      type="password"
+      placeholder="Password"
+      required
+    />
     <button type="submit">Login</button>
   </form>
-  
+</section>

@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://ixtar-backend.up.railway.app/",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

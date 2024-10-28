@@ -1,0 +1,38 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  form {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      margin-bottom: 1rem;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #7618ce;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 2rem;
+
+      &:hover{
+        background-color: #450886;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { response } from 'express';
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -11,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  credentials = {username: "", password: ""};
+  credentials = {email: "", password: ""};
 
   constructor(private authService: AuthService) {}
 
