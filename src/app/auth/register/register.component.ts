@@ -25,19 +25,22 @@ export class RegisterComponent {
     } else {
       this.passwordMismatch = false;
     }
-
-    this.authService.register(this.user).subscribe(
-      (response) => {
-        console.log('User registered successfully', response);
+    console.log("Datos enviados desde el frontend:", this.user); 
+    this.authService.register(this.user).subscribe({
+      complete: () => {
+        this.user = { username: '', password: '', email: '' };
+        this.repeatPassword = '';
+        this.passwordMismatch = false;
+        console.log('Registration completed');
       },
-      (error) => {
+      error: (error) => {
         console.error('Error registering user', error);
         if (error.status === 400) {
           console.error('Invalid credentials provided');
         } else {
           console.error('An error occurred while registering the user');
         }
-      }
-    );
+      },
+    });
   }
 }

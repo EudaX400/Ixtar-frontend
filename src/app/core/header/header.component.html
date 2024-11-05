@@ -3,19 +3,31 @@
     <ul>
       <li><a (click)="goToHome()">Home</a></li>
       <li><a routerLink="/register">Funciones</a></li>
+      @if (!isLoggedIn) {
       <li><a routerLink="/login">Login</a></li>
+      }
     </ul>
     <div>
       <button type="button" class="btn-primary" (click)="goToProject()">
         Nuevo Proyecto
       </button>
+      @if (isLoggedIn) {
+      <a (click)="goToProfile()">Perfil</a>
+      }
     </div>
   </nav>
   <div class="headerMobile">
-    <img src="/icons/MenuMobileIcon.svg" alt="" (click)="toggleMenuMobile()" [style.display]="showMenuMobile ? 'none' : 'inline'"/>
+    <img
+      src="/icons/MenuMobileIcon.svg"
+      alt=""
+      (click)="toggleMenuMobile()"
+      [style.display]="showMenuMobile ? 'none' : 'inline'"
+    />
     @if (showMenuMobile) {
-      <app-header-mobile [showMenuMobile]="showMenuMobile" (toggleMenuMobile)="toggleMenuMobile()" ></app-header-mobile>
+    <app-header-mobile
+      [showMenuMobile]="showMenuMobile"
+      (toggleMenuMobile)="toggleMenuMobile()"
+    ></app-header-mobile>
     }
   </div>
-
 </header>

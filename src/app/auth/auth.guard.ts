@@ -9,7 +9,7 @@ export class AuthGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(): boolean {
-    if (this.isBrowser()) {  // Verifica si estás en el navegador
+    if (this.isBrowser()) {
       const token = localStorage.getItem('token');
       if (token) {
         return true;
@@ -18,7 +18,7 @@ export class AuthGuard implements CanActivate {
         return false;
       }
     } else {
-      return false; // En el servidor no puedes autenticar
+      return false; 
     }
   }
 

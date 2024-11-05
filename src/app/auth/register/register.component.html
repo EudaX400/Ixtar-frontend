@@ -2,14 +2,14 @@
   <form (submit)="onSubmit()">
     <label>Enter the username</label>
     <input
-      [ngModel]="user.username"
+      [(ngModel)]="user.username"
       placeholder="Username"
       name="username"
       required
     />
     <label>Enter the email</label>
     <input
-      [ngModel]="user.email"
+      [(ngModel)]="user.email"
       type="email"
       name="email"
       placeholder="Email"
@@ -17,7 +17,7 @@
     />
     <label>Enter the password</label>
     <input
-      [ngModel]="user.password"
+      [(ngModel)]="user.password"
       type="password"
       name="password"
       placeholder="Password"
@@ -25,7 +25,7 @@
     />
     <label>Repeat the password</label>
     <input
-      [ngModel]="user.password"
+      [(ngModel)]="repeatPassword"
       type="password"
       name="password"
       placeholder="Repeat Password"
@@ -33,7 +33,7 @@
     />
 
     @if (passwordMismatch){
-      <div class="error">Passwords do not match</div>
+    <div class="error">Passwords do not match</div>
     }
     <button type="submit">Register</button>
   </form>

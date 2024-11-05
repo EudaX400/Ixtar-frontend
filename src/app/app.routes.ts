@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { ProfileComponent } from './auth/profile/profile.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'project', component: ProjectComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }, 
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileComponent },
   
 ];
 

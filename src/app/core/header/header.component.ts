@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeaderMobileComponent } from "../header-mobile/header-mobile.component";
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -11,16 +12,28 @@ import { HeaderMobileComponent } from "../header-mobile/header-mobile.component"
 })
 export class HeaderComponent {
   showMenuMobile = false;
-toggleMenuMobile() {
-  this.showMenuMobile =!this.showMenuMobile;
-}
-  constructor(private router: Router) {}
-goToProject() {
-  this.router.navigate(['/project']); 
-}
+  isLoggedIn = false;
 
-goToHome() {
-  this.router.navigate(['/home']);
-}
+  constructor(private router: Router, private authService: AuthService) {
+    this.authService.isLoggedIn$.subscribe((loggedIn) => {
+      this.isLoggedIn = loggedIn;
+    });
+  }
+
+  toggleMenuMobile() {
+    this.showMenuMobile = !this.showMenuMobile;
+  }
+
+  goToProject() {
+    this.router.navigate(['/project']); 
+  }
+
+  goToHome() {
+    this.router.navigate(['/home']);
+  }
+
+  goToProfile() {
+    this.router.navigate(['/profile']);
+  }
 
 }
