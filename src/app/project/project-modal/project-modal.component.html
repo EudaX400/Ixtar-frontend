@@ -1,0 +1,23 @@
+<div class="modal">
+    <h2>Crear Proyecto</h2>
+    <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+      <label>Nombre del Proyecto:</label>
+      <input formControlName="name" required />
+  
+      <label>Descripción:</label>
+      <textarea formControlName="description"></textarea>
+  
+      <label>Tipo:</label>
+      <input formControlName="type" />
+  
+      <label>Empresa:</label>
+      <input formControlName="company" />
+  
+      <label>Fecha de Finalización:</label>
+      <input type="date" formControlName="finishAt" />
+  
+      <button type="submit">Crear</button>
+      <button type="button" (click)="closeModal()">Cancelar</button>
+    </form>
+  </div>
+  

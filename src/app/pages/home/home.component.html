@@ -5,7 +5,13 @@
       eficiente.
     </p>
   
-    <button type="button" class="btn-primary" (click)="goToProject()">Nuevo Proyecto</button>
+    <button type="button" class="btn-primary" (click)="openProjectModal()">Nuevo Proyecto</button>
+    @if (showModal){
+      <div class="project-modal">
+        <app-project-modal (projectCreated)="handleProjectModal($event)"></app-project-modal>
+      </div>
+      
+    }
   </section>
   
   <section class="do-section">

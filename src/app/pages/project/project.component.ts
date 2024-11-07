@@ -5,6 +5,7 @@ import { DetailsComponent } from "../../project/details/details.component";
 import { IdeasComponent } from "../../project/ideas/ideas.component";
 import { FormsModule } from '@angular/forms';
 import { BoardComponent } from "../../kanban/board/board.component";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-project',
@@ -17,6 +18,7 @@ export class ProjectComponent {
   selectedSection: string = 'manage';  // Estado inicial para la sección
   newTask: string = '';               // Nueva tarea
   newTaskSection: string = '';         // Control para la nueva tarea en columnas específicas
+  projectId: string | null = null;
 
   // Definir las tareas
   tasks: { [key: string]: string[] } = {
@@ -24,6 +26,16 @@ export class ProjectComponent {
     inProgress: ['Tarea 3'],
     done: ['Tarea 4']
   };
+
+  constructor(private route: ActivatedRoute) { }  // Inyecta ActivatedRoute para obtener el projectId de la URL
+
+  ngOnInit() {
+    // Obtiene el projectId de la URL
+    this.projectId = this.route.snapshot.paramMap.get('id');
+    
+    // Aquí puedes llamar a un servicio para obtener los detalles del proyecto con projectId
+    // this.projectService.getProject(this.projectId).subscribe(project => { ... });
+  }
 
   // Método para manejar el cambio de sección (ideas, details, etc.)
   onSectionChange(section: string) {

@@ -10,7 +10,7 @@ import { ProfileComponent } from './auth/profile/profile.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'project', component: ProjectComponent },
+  { path: 'project/:id', component: ProjectComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }, 
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
